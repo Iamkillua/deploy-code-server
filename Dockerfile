@@ -20,6 +20,11 @@ COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
+RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
+RUN sudo apt-get install -y nodejs
+RUN sudo apt-get install -y neofetch
+RUN sudo apt-get install openjdk-8-jdk
+
 # -----------
 
 # Install a VS Code extension:
