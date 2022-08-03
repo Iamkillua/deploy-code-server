@@ -22,7 +22,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # You can add custom software and dependencies for your environment below
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
-RUN sudo apt-get install wget
+RUN sudo apt-get install -y wget
 RUN sudo apt-get install -y neofetch
 RUN sudo apt install -y libc6-x32 libc6-i386
 RUN wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb
