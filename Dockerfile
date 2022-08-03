@@ -24,11 +24,23 @@ RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 RUN sudo apt-get install -y wget
 RUN sudo apt-get install -y neofetch
+<<<<<<< HEAD
 RUN sudo apt install -y libc6-x32 libc6-i386
 RUN sudo apt-get install -y libxi6
 RUN sudo apt-get install -y libasound2-dev
 RUN sudo apt-get install -y libxrender1
 RUN sudo apt-get install -y libxtst6
+=======
+RUN curl -O https://download.java.net/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d/36/GPL/openjdk-18_linux-x64_bin.tar.gz
+RUN tar xvf openjdk-18_linux-x64_bin.tar.gz
+RUN sudo mv jdk-18 /opt/
+RUN sudo tee /etc/profile.d/jdk18.sh <<EOF
+export JAVA_HOME=/opt/jdk-18
+export PATH=\$PATH:\$JAVA_HOME/bin
+EOF
+
+
+>>>>>>> 92d9f2a0e14af585f7086f21666bbe6fe95477b5
 
 RUN wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb
 RUN sudo dpkg -i jdk-17_linux-x64_bin.deb
