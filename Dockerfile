@@ -32,6 +32,9 @@ RUN sudo apt-get install -y libxtst6
 
 RUN wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb
 RUN sudo dpkg -i jdk-17_linux-x64_bin.deb
+RUN sudo apt-get install -y default-jre
+
+
 # -----------
 
 # Install a VS Code extension:
